@@ -10,8 +10,9 @@
         class="el-dialog__headerbtn goback"
         type="button"
         v-if="step == 2"
+        @click="go(1)"
       >
-        <el-icon @click="go(1)"><ArrowLeft /></el-icon>
+        <el-icon><ArrowLeft /></el-icon>
       </button>
       <div class="title">Item Details</div>
     </template>
