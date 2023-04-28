@@ -1,0 +1,27 @@
+$color_red: #e26660;
+$color_blue:#3b4372;
+$color_dark_red:#a35050;
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin flex($j, $ac) {
+    display: flex;
+    justify-content: $j;
+    align-items: $ac;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+@mixin nameInForm($w) {
+    width: $w;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

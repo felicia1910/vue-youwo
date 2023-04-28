@@ -1,0 +1,101 @@
+@import "./style.scss";
+
+.post-img{
+    @include size(100%,0);
+    padding-bottom: 60%;
+
+    img{
+        height: auto;
+    }
+}
+
+.show-product{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    .product{
+        @include size(100%,100%);
+        position: relative; 
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .product:hover{
+        opacity: .5;
+    }
+}
+
+
+.btn{
+    cursor: pointer;
+    transition: .3s;
+}
+
+/*-----------------pop*-----------------*/
+.el-dialog{
+    position: relative;
+
+    .el-dialog__header{
+        margin-right: 0;
+    }
+
+    .el-dialog__headerbtn{
+        color: #333;
+    }
+
+    .el-icon{
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .title{
+        width: 100%;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    .goback{
+        left: 0px;
+    }
+}
+
+.pop-step1{
+    .product-img-box{
+        position: relative;
+        @include size(100%,30vh);
+        margin-bottom: 20px;
+        .el-image{
+            @include size(100%,100%);
+        }
+        .btn{
+            position: absolute;
+            right: -10px;
+            bottom: -10px;
+            @include size(100px,40px);
+            @include flexCenter;
+            border-radius: 10px;
+            background-color: rgb(34, 181, 189);
+            border:solid 2px #fff;
+            color: #fff;
+        }
+        .btn:hover{
+            background-color: rgb(37, 166, 173);
+        }
+    }
+    
+    p{
+        text-align: left;
+    }
+
+}
+
+.pop-step2{
+    .prod-img{
+        @include size(100%,200px);
+        margin-bottom: 20px;
+    }
+
+}
+@media screen and (max-width: 550px) {
+
+}
