@@ -30,7 +30,9 @@
         class="prod-img"
         :src="props.data[nowProductKey].imgUrl"
         fit="cover"
+        lazy
       />
+      
       <el-image
         class="post-img"
         :src="props.postData[postKeyNum].imgUrl"
