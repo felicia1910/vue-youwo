@@ -19,7 +19,7 @@
 
     <div class="pop-step1" v-if="step == 1">
       <div class="product-img-box">
-        <el-image :src="props.data[nowProductKey].imgUrl" fit="cover" />
+        <el-image :src="props.data[nowProductKey].imgUrl" fit="cover" lazy/>
         <div class="btn" @click="go(2)">Seen In</div>
       </div>
       <div class="text" v-html="props.data[nowProductKey].text"></div>
@@ -34,6 +34,7 @@
       <el-image
         class="post-img"
         :src="props.postData[postKeyNum].imgUrl"
+        lazy
         fit="cover"
       />
       <div class="show-product">
@@ -43,6 +44,7 @@
           :key="k"
           :src="v.imgUrl"
           fit="cover"
+          lazy
           @click="handleImgData(k)"
         />
       </div>

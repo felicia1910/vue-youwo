@@ -1,5 +1,5 @@
 <template>
-  <el-image class="post-img" :src="postData[nowPostKey].imgUrl" fit="cover" />
+  <el-image class="post-img" :src="postData[nowPostKey].imgUrl" fit="cover" lazy/>
 
   <div class="show-product">
     <el-image
@@ -8,6 +8,7 @@
       :key="k"
       :src="v.imgUrl"
       fit="cover"
+      lazy
       @click="handlePop(true, k)"
     />
   </div>
@@ -16,7 +17,6 @@
     :pop="popupValue"
     @closePop="handlePop(false)"
     :data="productData"
-    :postData="postData"
     :nowProductKey="nowProductKey"
     @changeImg="changeImg"
   />
@@ -36,11 +36,6 @@ const postData = [
     id: 2,
     imgUrl:
       "https://fuss10.elemecdn.com/3/28/bbf893f792f03a54408b3b7a7ebf0jpeg.jpeg",
-  },
-  {
-    id: 3,
-    imgUrl:
-      "https://fuss10.elemecdn.com/d/e6/c4d93a3805b3ce3f323f7974e6f78jpeg.jpeg",
   },
 ];
 
